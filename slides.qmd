@@ -1,0 +1,38 @@
+---
+format: 
+    revealjs:
+        theme: default
+        logo: "images/JAX_logo_rgb_transparentback.png"
+        slide-number: true
+        footer: Imaging Applications, Research IT, JAX
+        transition: "slide"
+        highlight-style: github
+        chalkboard: 
+            buttons: false
+        controls-layout: bottom-right
+---
+
+## Contributing to the napari community: 
+#### widgets, plugins, napari core, documentation—oh my!
+<br/>
+
+:::: {.columns}
+
+::: {.column width="60%"}
+**Peter Sobolewski (he/him)**
+
+Systems Analyst
+
+Imaging Applications
+
+Research IT
+
+The Jackson Laboratory
+:::
+
+::: {.column width="40%"}
+![](images/napari_logo.svg){width="300" fig-alt="napari logo" fig-align="right"}
+:::
+
+::::
+
