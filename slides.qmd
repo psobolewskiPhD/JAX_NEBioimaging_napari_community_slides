@@ -4,7 +4,7 @@ format:
         theme: default
         logo: "images/JAX_logo_rgb_transparentback.png"
         slide-number: true
-        footer: Imaging Applications, Research IT, JAX
+        footer: Northeast Bioimage Analysis Meeting
         transition: "slide"
         highlight-style: github
         chalkboard: 
@@ -21,12 +21,9 @@ format:
 ::: {.column width="60%"}
 **Peter Sobolewski (he/him)**
 
-Systems Analyst
-
-Imaging Applications
-
-Research IT
-
+Systems Analyst  
+Imaging Applications  
+Research IT  
 The Jackson Laboratory
 :::
 
