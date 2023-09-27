@@ -84,4 +84,6 @@ nbscreenshot(viewer, alt_text="A rotated 3D view of labled blobs")
 viewer.close()
 ```
 
+## {background-iframe="https://napari.org/stable/gallery.html#gallery" background-interactive=true}
+
 ---
