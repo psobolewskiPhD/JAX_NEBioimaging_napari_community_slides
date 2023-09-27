@@ -6,10 +6,15 @@ format:
         slide-number: true
         footer: Northeast Bioimage Analysis Meeting
         transition: "slide"
-        highlight-style: github
+        highlight-style: arrow
         chalkboard: 
             buttons: false
         controls-layout: bottom-right
+jupyter: python3
+execute: 
+  cache: true
+---
+
 ---
 
 ## Contributing to the napari community: 
@@ -33,3 +38,50 @@ The Jackson Laboratory
 
 ::::
 
+## What is napari?
+
+a Python library for n-dimensional image visualisation, annotation, and analysis.
+![](images/viewer_screenshot.png){fig-alt="screenshot of napari viewer in 3D rendering mode showing 3 layers: 1) image of cell nuclei (green), 2) image of cell membranes (purple), 3) points indicating nuclei (red)" height="500" }
+
+## What can napari be used for?
+
+- view & explore 2D, 3D, and higher-dimensional arrays
+- overlay derived data such as points, polygons, labels, and more
+- seamlessly weave exploration, computation, and annotation together in imaging data analysis
+
+---
+
+> # Headless napari is just Python!  
+-- Juan Nunez-Iglesias (jni)
+
+---
+
+```{python}
+#| code-fold: true
+#| code-summary: "expand for full code"
+#| echo: true
+from skimage import data
+from scipy import ndimage as ndi
+
+import napari
+
+blobs = data.binary_blobs(length=128, volume_fraction=0.1, n_dim=3)
+labeled = ndi.label(blobs)[0]
+viewer, image_layer = napari.imshow(blobs, name='blobs')
+viewer.add_labels(labeled, name='blob ID')
+viewer.dims.ndisplay = 3
+viewer.camera.zoom = 3
+viewer.camera.angles = (3, 38, 53)
+```
+```{python}
+#| echo: false
+from napari.utils import nbscreenshot
+nbscreenshot(viewer, alt_text="A rotated 3D view of labled blobs")
+```
+```{python}
+#| echo: false
+#| outout: false
+viewer.close()
+```
+
+---
