@@ -17,22 +17,24 @@ execute:
 
 ---
 
-## Contributing to the napari community: 
+### Contributing to the napari community:
 #### widgets, plugins, napari core, documentation—oh my!
 <br/>
 
 :::: {.columns}
 
-::: {.column width="60%"}
+::: {.column width="65%"}
 **Peter Sobolewski (he/him)**
 
-Systems Analyst  
-Imaging Applications  
-Research IT  
-The Jackson Laboratory
+> Systems Analyst  
+>Imaging Applications  
+>Research IT  
+>The Jackson Laboratory  
+
+>Member, napari core developer team
 :::
 
-::: {.column width="40%"}
+::: {.column width="35%"}
 ![](images/napari_logo.svg){width="300" fig-alt="napari logo" fig-align="right"}
 :::
 
@@ -48,6 +50,27 @@ a Python library for n-dimensional image visualisation, annotation, and analysis
 - view & explore 2D, 3D, and higher-dimensional arrays
 - overlay derived data such as points, polygons, labels, and more
 - seamlessly weave exploration, computation, and annotation together in imaging data analysis
+
+## napari an open-source, community developed project—anyone can contribute! {.center}
+
+## Ask and answer questions!
+
+- image.sc forum: [https://forum.image.sc/tag/napari](https://forum.image.sc/tag/napari)
+
+- napari Zulip chat: [https://napari.zulipchat.com](https://napari.zulipchat.com/)
+
+::: aside
+No accounts are needed to lurk...
+:::
+
+## Report bugs—or test existing ones
+
+- GitHub Issues: [https://github.com/napari/napari/issues](https://github.com/napari/napari/issues)
+
+::: aside
+This does require an account (free), **but you can use that account to login at image.sc and zulipchat.com!**
+:::
+
 
 ---
 
@@ -72,6 +95,9 @@ viewer.add_labels(labeled, name='blob ID')
 viewer.dims.ndisplay = 3
 viewer.camera.zoom = 3
 viewer.camera.angles = (3, 38, 53)
+
+if __name__ == '__main__':
+    napari.run()
 ```
 ```{python}
 #| echo: false
@@ -84,6 +110,6 @@ nbscreenshot(viewer, alt_text="A rotated 3D view of labled blobs")
 viewer.close()
 ```
 
-## {background-iframe="https://napari.org/stable/gallery.html#gallery" background-interactive=true}
+## {background-iframe="https://napari.org/stable/gallery.html#gallery" background-interactive=false}
 
 ---
