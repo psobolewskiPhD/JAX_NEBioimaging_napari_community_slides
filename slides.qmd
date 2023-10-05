@@ -15,9 +15,12 @@ execute:
   cache: true
 ---
 
----
+## blank
+
+## 
 
 ### Contributing to the napari community:
+
 #### widgets, plugins, napari core, documentation—oh my!
 <br/>
 
@@ -53,11 +56,19 @@ a Python library for n-dimensional image visualisation, annotation, and analysis
 
 ## napari an open-source, community developed project—anyone can contribute! {.center}
 
+## What is the napari community?
+
+- napari users: local and global
+- napari plugin developers
+- napari core developers
+
 ## Ask and answer questions!
 
 - image.sc forum: [https://forum.image.sc/tag/napari](https://forum.image.sc/tag/napari)
 
 - napari Zulip chat: [https://napari.zulipchat.com](https://napari.zulipchat.com/)
+
+- napari community meetings: [https://napari.org/stable/community/meeting_schedule.html](https://napari.org/stable/community/meeting_schedule.html)
 
 ::: aside
 No accounts are needed to lurk...
@@ -71,14 +82,14 @@ No accounts are needed to lurk...
 This does require an account (free), **but you can use that account to login at image.sc and zulipchat.com!**
 :::
 
-
----
+## 
 
 > # Headless napari is just Python!  
--- Juan Nunez-Iglesias (jni)
 
----
+### -- Juan Nuñez-Iglesias (**@jni**)
 
+
+## Share Python scripts!
 ```{python}
 #| code-fold: true
 #| code-summary: "expand for full code"
@@ -110,6 +121,31 @@ nbscreenshot(viewer, alt_text="A rotated 3D view of labled blobs")
 viewer.close()
 ```
 
-## {background-iframe="https://napari.org/stable/gallery.html#gallery" background-interactive=false}
+## Python scripts can contribute widgets!
 
----
+- extend the napari GUI using Python scripts
+
+[scikit-image filter example](https://napari.org/stable/gallery/magic_parameter_sweep.html#sphx-glr-gallery-magic-parameter-sweep-py)
+
+- local changes, share using github repo of scripts or gists
+
+## Develop a napari plugin
+
+napari plugins are Python packages that can:
+
+- add file-type readers & writers
+- extend the GUI
+
+Plugins are publically discoverable and have global reach via PyPI and napari-hub.org
+
+## Contribute to documentation
+
+- write a how-to, guide, or tutorial
+- share a workshop
+- help document features/use cases
+
+## Contribute to napari core
+
+- fix a bug
+- implement a feature
+- review code
