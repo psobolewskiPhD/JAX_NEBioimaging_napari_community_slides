@@ -61,6 +61,7 @@ a Python library for n-dimensional image visualisation, annotation, and analysis
 - napari users: local and global
 - napari plugin developers
 - napari core developers
+- broader scientific Python community
 
 ## Ask and answer questions!
 
@@ -74,12 +75,21 @@ a Python library for n-dimensional image visualisation, annotation, and analysis
 No accounts are needed to lurk...
 :::
 
+::: {.notes}
+domain specific knowledge is valuable too!
+feedback, Q&A, share use cases
+:::
+
 ## Report bugs—or test existing ones
 
 - GitHub Issues: [https://github.com/napari/napari/issues](https://github.com/napari/napari/issues)
 
 ::: aside
 This does require an account (free), **but you can use that account to login at image.sc and zulipchat.com!**
+:::
+
+::: {.notes}
+reporting problems is very valuable!
 :::
 
 ## 
@@ -89,7 +99,7 @@ This does require an account (free), **but you can use that account to login at 
 ### -- Juan Nuñez-Iglesias (**@jni**)
 
 
-## Share Python scripts!
+## Share Python scripts & notebooks!
 ```{python}
 #| code-fold: true
 #| code-summary: "expand for full code"
@@ -121,31 +131,60 @@ nbscreenshot(viewer, alt_text="A rotated 3D view of labled blobs")
 viewer.close()
 ```
 
-## Python scripts can contribute widgets!
+## Python scripts can handle events and contribute widgets!
 
+- cusstomize napari functionality
 - extend the napari GUI using Python scripts
 
 [scikit-image filter example](https://napari.org/stable/gallery/magic_parameter_sweep.html#sphx-glr-gallery-magic-parameter-sweep-py)
 
-- local changes, share using github repo of scripts or gists
+::: {.notes}
+events how-to
+magicgui how-to
+:::
+
+## How to share Python scripts & notebooks
+
+- email/fileshare with colleagues
+- use GitHub:
+* use GitHub Gists
+* make a repository of scripts
+- with publication (zenodo, etc.)
 
 ## Develop a napari plugin
 
 napari plugins are Python packages that can:
 
 - add file-type readers & writers
+- customize functionality
 - extend the GUI
+- provide demo/sample data
 
-Plugins are publically discoverable and have global reach via PyPI and napari-hub.org
+Plugins can be publically discoverable and have global reach via PyPI and napari-hub.org
+
+::: {.notes}
+contribute to plugins
+:::
 
 ## Contribute to documentation
 
 - write a how-to, guide, or tutorial
 - share a workshop
 - help document features/use cases
+- copy edit & review
 
-## Contribute to napari core
+::: {.notes}
+plugin docs
+:::
+
+## Contribute code
 
 - fix a bug
+- write an example
 - implement a feature
 - review code
+
+::: {.notes}
+other napari repos npe2
+napari ecosystem
+:::
