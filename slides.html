@@ -540,12 +540,59 @@ The Jackson Laboratory</p>
 <section id="python-scripts-can-handle-events-and-contribute-widgets" class="slide level2">
 <h2>Python scripts can handle events and contribute widgets!</h2>
 <ul>
-<li>cusstomize napari functionality</li>
-<li>extend the napari GUI using Python scripts</li>
+<li>customize napari functionality:
+<ul>
+<li>keyboard and mouse events: <a href="https://napari.org/stable/howtos/connecting_events.html">https://napari.org/stable/howtos/connecting_events.html</a></li>
+</ul></li>
 </ul>
-<p><a href="https://napari.org/stable/gallery/magic_parameter_sweep.html#sphx-glr-gallery-magic-parameter-sweep-py">scikit-image filter example</a></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="at">@labels_layer.mouse_drag_callbacks.append</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="kw">def</span> get_connected_component_shape(layer, event):</span>
+<span id="cb2-3"><a href="#cb2-3"></a>    data_coordinates <span class="op">=</span> layer.world_to_data(event.position)</span>
+<span id="cb2-4"><a href="#cb2-4"></a>    cords <span class="op">=</span> np.<span class="bu">round</span>(data_coordinates).astype(<span class="bu">int</span>)</span>
+<span id="cb2-5"><a href="#cb2-5"></a>    val <span class="op">=</span> layer.get_value(data_coordinates)</span>
+<span id="cb2-6"><a href="#cb2-6"></a>    <span class="cf">if</span> val <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb2-7"><a href="#cb2-7"></a>        <span class="cf">return</span></span>
+<span id="cb2-8"><a href="#cb2-8"></a>    <span class="cf">if</span> val <span class="op">!=</span> <span class="dv">0</span>:</span>
+<span id="cb2-9"><a href="#cb2-9"></a>        data <span class="op">=</span> layer.data</span>
+<span id="cb2-10"><a href="#cb2-10"></a>        binary <span class="op">=</span> data <span class="op">==</span> val</span>
+<span id="cb2-11"><a href="#cb2-11"></a>        <span class="cf">if</span> <span class="st">'Shift'</span> <span class="kw">in</span> event.modifiers:</span>
+<span id="cb2-12"><a href="#cb2-12"></a>            binary_new <span class="op">=</span> binary_erosion(binary)</span>
+<span id="cb2-13"><a href="#cb2-13"></a>            data[binary] <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb2-14"><a href="#cb2-14"></a>        <span class="cf">else</span>:</span>
+<span id="cb2-15"><a href="#cb2-15"></a>            binary_new <span class="op">=</span> binary_dilation(binary)</span>
+<span id="cb2-16"><a href="#cb2-16"></a>        data[binary_new] <span class="op">=</span> val</span>
+<span id="cb2-17"><a href="#cb2-17"></a>        size <span class="op">=</span> np.<span class="bu">sum</span>(binary_new)</span>
+<span id="cb2-18"><a href="#cb2-18"></a>        layer.data <span class="op">=</span> data</span>
+<span id="cb2-19"><a href="#cb2-19"></a>        msg <span class="op">=</span> (</span>
+<span id="cb2-20"><a href="#cb2-20"></a>            <span class="ss">f'clicked at </span><span class="sc">{</span>cords<span class="sc">}</span><span class="ss"> on blob </span><span class="sc">{</span>val<span class="sc">}</span><span class="ss"> which is now </span><span class="sc">{</span>size<span class="sc">}</span><span class="ss"> pixels'</span></span>
+<span id="cb2-21"><a href="#cb2-21"></a>        )</span>
+<span id="cb2-22"><a href="#cb2-22"></a>    <span class="cf">else</span>:</span>
+<span id="cb2-23"><a href="#cb2-23"></a>        msg <span class="op">=</span> <span class="ss">f'clicked at </span><span class="sc">{</span>cords<span class="sc">}</span><span class="ss"> on background which is ignored'</span></span>
+<span id="cb2-24"><a href="#cb2-24"></a>    <span class="bu">print</span>(msg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <aside class="notes">
-<p>events how-to magicgui how-to</p>
+<p>events how-to</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="python-scripts-can-handle-events-and-contribute-widgets-1" class="slide level2">
+<h2>Python scripts can handle events and contribute widgets!</h2>
+<ul>
+<li>extend the napari GUI using widgets
+<ul>
+<li><a href="https://napari.org/stable/gallery/magic_parameter_sweep.html#sphx-glr-gallery-magic-parameter-sweep-py">scikit-image filter example</a></li>
+</ul></li>
+</ul>
+<aside class="notes">
+<p>magicgui how-to</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -562,10 +609,12 @@ The Jackson Laboratory</p>
 <h2>How to share Python scripts &amp; notebooks</h2>
 <ul>
 <li>email/fileshare with colleagues</li>
-<li>use GitHub:</li>
-<li>use GitHub Gists</li>
+<li>use GitHub:
+<ul>
+<li>use GitHub Gists: <a href="https://gist.github.com/">https://gist.github.com</a></li>
 <li>make a repository of scripts</li>
-<li>with publication (zenodo, etc.)</li>
+</ul></li>
+<li>with publication (Zenodo, etc.)</li>
 </ul>
 </section>
 <section id="develop-a-napari-plugin" class="slide level2">
