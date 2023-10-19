@@ -180,11 +180,15 @@ napari plugins are Python packages that can:
 - extend the GUI
 - provide demo/sample data
 
-Plugins can be publically discoverable and have global reach via PyPI and [napari-hub.org](https://napari-hub.orgte)
+Plugins can be publically discoverable and have global reach via PyPI and [napari-hub.org](https://napari-hub.org)
 
 ::: {.notes}
 contribute to plugins
 :::
+
+## Plugins can be installed from within napari
+
+![](images/napari_plugin_UI.png){fig-alt="Screenshot of napari UI showing the plugin install/uninstall UI" fig-align="center"}
 
 ## Contribute to documentation
 
