@@ -15,7 +15,7 @@ execute:
   cache: true
 ---
 
-## blank
+## This slide intentionally left blank
 
 ## 
 
@@ -29,7 +29,7 @@ execute:
 ::: {.column width="65%"}
 **Peter Sobolewski (he/him)**
 
-> Systems Analyst  
+>Systems Analyst  
 >Imaging Applications  
 >Research IT  
 >The Jackson Laboratory  
@@ -54,7 +54,7 @@ a Python library for n-dimensional image visualisation, annotation, and analysis
 - overlay derived data such as points, polygons, labels, and more
 - seamlessly weave exploration, computation, and annotation together in imaging data analysis
 
-## napari an open-source, community developed project—anyone can contribute! {.center}
+## napari is an open-source, community developed project—anyone can contribute! {.center}
 
 ## What is the napari community?
 
@@ -90,6 +90,15 @@ This does require an account (free), **but you can use that account to login at 
 
 ::: {.notes}
 reporting problems is very valuable!
+:::
+
+## Dicsuss features and use-cases
+
+- napari roadmap: [https://github.com/orgs/napari/projects/24/views/1](https://github.com/orgs/napari/projects/24/views/1)
+- GitHub Issues: [https://github.com/napari/napari/issues](https://github.com/napari/napari/issues)
+
+::: aside
+Please check existing issues and/or join a Community meeting!
 :::
 
 ## 
