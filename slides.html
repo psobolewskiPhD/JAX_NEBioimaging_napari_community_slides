@@ -477,7 +477,9 @@ The Jackson Laboratory</p>
 <section id="report-bugsor-test-existing-ones" class="slide level2">
 <h2>Report bugs—or test existing ones</h2>
 <ul>
-<li>GitHub Issues: <a href="https://github.com/napari/napari/issues">https://github.com/napari/napari/issues</a></li>
+<li><p>GitHub Issues: <a href="https://github.com/napari/napari/issues">https://github.com/napari/napari/issues</a></p></li>
+<li><p>Reporting bugs/problems/inconstencies/confusion is <strong>extremely valuable!</strong></p></li>
+<li><p>When in doubt, report—we prefer duplicates than crickets!</p></li>
 </ul>
 
 <aside class="notes">
@@ -569,30 +571,21 @@ The Jackson Laboratory</p>
 </section>
 <section id="python-scripts-can-contribute-widgets" class="slide level2">
 <h2>Python scripts can contribute widgets!</h2>
-<ul>
-<li><a href="https://pyapp-kit.github.io/magicgui/"><code>magicgui</code></a> makes this quite easy, see <a href="https://napari.org/stable/guides/magicgui.html">https://napari.org/stable/guides/magicgui.html</a></li>
-</ul>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/magic_parameter_screenshot.png" alt="Screenshot of napari UI with a docked widget on the right for applying scikit-image filters" height="350"></p>
+<p><img data-src="images/magic_parameter_screenshot.png" alt="Screenshot of napari UI with a docked widget on the right for applying scikit-image filters" height="450"></p>
 </figure>
 </div>
+
+<aside><div>
+<p>Example: <a href="https://napari.org/stable/gallery/magic_parameter_sweep.html">https://napari.org/stable/gallery/magic_parameter_sweep.html</a></p>
+</div></aside></section>
+<section id="python-scripts-can-contribute-widgets-1" class="slide level2">
+<h2>Python scripts can contribute widgets!</h2>
 <ul>
-<li><a href="https://napari.org/stable/gallery/magic_parameter_sweep.html">scikit-image filter example: https://napari.org/stable/gallery/magic_parameter_sweep.html</a></li>
+<li><a href="https://pyapp-kit.github.io/magicgui/"><code>magicgui</code></a> makes this quite easy, see <a href="https://napari.org/stable/guides/magicgui.html">https://napari.org/stable/guides/magicgui.html</a></li>
+<li>…but you can also use <code>Qt</code> for maximal control by subclassing <code>QWidget</code></li>
 </ul>
-<aside class="notes">
-<p>magicgui how-to</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
 <section id="how-to-share-python-scripts-notebooks" class="slide level2">
 <h2>How to share Python scripts &amp; notebooks</h2>

@@ -84,6 +84,9 @@ feedback, Q&A, share use cases
 
 - GitHub Issues: [https://github.com/napari/napari/issues](https://github.com/napari/napari/issues)
 
+- Reporting bugs/problems/inconstencies/confusion is **extremely valuable!**
+- When in doubt, report—we prefer duplicates than crickets!
+
 ::: aside
 This does require an account (free), **but you can use that account to login at image.sc and zulipchat.com!**
 :::
@@ -161,19 +164,20 @@ events how-to
 
 ## Python scripts can contribute widgets!
 
-- [`magicgui`](https://pyapp-kit.github.io/magicgui/) makes this quite easy, see [https://napari.org/stable/guides/magicgui.html](https://napari.org/stable/guides/magicgui.html)
+![](images/magic_parameter_screenshot.png){height="450" fig-alt="Screenshot of napari UI with a docked widget on the right for applying scikit-image filters" fig-align="center"}
 
-![](images/magic_parameter_screenshot.png){height="350" fig-alt="Screenshot of napari UI with a docked widget on the right for applying scikit-image filters" fig-align="center"}
-
-- [scikit-image filter example: https://napari.org/stable/gallery/magic_parameter_sweep.html](https://napari.org/stable/gallery/magic_parameter_sweep.html)
-
-::: {.notes}
-magicgui how-to
+::: aside
+Example: [https://napari.org/stable/gallery/magic_parameter_sweep.html](https://napari.org/stable/gallery/magic_parameter_sweep.html)
 :::
+
+## Python scripts can contribute widgets!
+
+- [`magicgui`](https://pyapp-kit.github.io/magicgui/) makes this quite easy, see [https://napari.org/stable/guides/magicgui.html](https://napari.org/stable/guides/magicgui.html)
+- ...but you can also use `Qt` for maximal control by subclassing `QWidget`
 
 ## How to share Python scripts & notebooks
 
-- email/fileshare with colleagues
+- email/fileshare with colleagues, collaborators, etc.
 - use GitHub:
     * use GitHub Gists: [https://gist.github.com](https://gist.github.com/)
     * make a repository of scripts
