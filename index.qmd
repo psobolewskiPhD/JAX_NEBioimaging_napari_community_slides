@@ -53,6 +53,7 @@ a Python library for n-dimensional image visualisation, annotation, and analysis
 - view & explore 2D, 3D, and higher-dimensional arrays
 - overlay derived data such as points, polygons, labels, and more
 - seamlessly weave exploration, computation, and annotation together in imaging data analysis
+- leverage scientific Python ecosystem
 
 ## napari is an open-source, community developed project—anyone can contribute! {.center}
 
