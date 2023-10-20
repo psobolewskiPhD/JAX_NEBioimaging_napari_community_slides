@@ -20,4 +20,6 @@ are extremely valuable—by reviewing, editing, updating, or writing new guides 
 All of these contributions combine to make for a supportive, dynamic, and sustainable napari community.
  
 
-
+The slide content is provided under a [CC-BY licence](https://creativecommons.org/licenses/by/4.0/). 
+You may reuse and share the contents for any purpose, in any way, just please make sure to provide
+attribution to this source material.
