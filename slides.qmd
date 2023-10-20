@@ -195,7 +195,7 @@ napari plugins are Python packages that can:
 Plugins can be publically discoverable and have global reach via PyPI and [napari-hub.org](https://napari-hub.org)
 
 ::: {.notes}
-contribute to plugins
+over 350, you can also choose to contribute to existing plugins
 :::
 
 ## Plugins can be installed from within napari
@@ -204,23 +204,40 @@ contribute to plugins
 
 ## Contribute to documentation
 
+napari documentation repository: [https://github.com/napari/docs](https://github.com/napari/docs)
+
+Contribution guide: [https://napari.org/dev/developers/documentation/index.html](https://napari.org/dev/developers/documentation/index.html)
+
 - write a how-to, guide, or tutorial
 - share a workshop
 - help document features/use cases
 - copy edit & review
 
+::: aside
+Don't forget you can contribute to the documentation of your favorite plugin too!
+:::
+
 ::: {.notes}
 plugin docs
 :::
 
-## Contribute code
+## Contribute code to napari
+
+napari repository: [https://github.com/napari/napari](https://github.com/napari/napari)
+Contribution guide: [https://napari.org/dev/developers/contributing.html](https://napari.org/dev/developers/contributing.html)
 
 - fix a bug
 - write an example
 - implement a feature
 - review code
 
+::: aside
+Don't forget about plugins! You can contribute code to them too!
+:::
+
 ::: {.notes}
 other napari repos npe2
 napari ecosystem
 :::
+
+## Thank you! {.center}
