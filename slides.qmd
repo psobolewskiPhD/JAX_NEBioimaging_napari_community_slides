@@ -142,10 +142,18 @@ viewer.close()
 
 ## Python scripts can handle keyboard and mouse events!
 
-- customize napari functionality:
+- Customize napari functionality:
     * keyboard and mouse events: [https://napari.org/stable/howtos/connecting_events.html](https://napari.org/stable/howtos/connecting_events.html)
 
-- Example: [https://napari.org/stable/gallery/custom_mouse_functions.html#sphx-glr-gallery-custom-mouse-functions-py](https://napari.org/stable/gallery/custom_mouse_functions.html#sphx-glr-gallery-custom-mouse-functions-py)
+```python
+@viewer.bind_key('a')
+def accept_image(viewer):
+    msg = 'this is a good image'
+    viewer.status = msg
+    print(msg)
+```
+
+- Example: [https://napari.org/stable/gallery/custom_mouse_functions.html](https://napari.org/stable/gallery/custom_mouse_functions.html#sphx-glr-gallery-custom-mouse-functions-py)
 
 ::: {.notes}
 events how-to
@@ -155,7 +163,7 @@ events how-to
 
 - [`magicgui`](https://pyapp-kit.github.io/magicgui/) makes this quite easy, see [https://napari.org/stable/guides/magicgui.html](https://napari.org/stable/guides/magicgui.html)
 
-![](images/sphx_glr_magic_parameter_sweep_001.png){fig-alt="Screenshot of napari UI with a docked widget on the right for applying scikit-image filters" fig-align="center"}
+![](images/magic_parameter_screenshot.png){height="350" fig-alt="Screenshot of napari UI with a docked widget on the right for applying scikit-image filters" fig-align="center"}
 
 - [scikit-image filter example: https://napari.org/stable/gallery/magic_parameter_sweep.html](https://napari.org/stable/gallery/magic_parameter_sweep.html)
 

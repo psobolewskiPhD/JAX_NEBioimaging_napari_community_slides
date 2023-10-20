@@ -540,11 +540,18 @@ The Jackson Laboratory</p>
 <section id="python-scripts-can-handle-keyboard-and-mouse-events" class="slide level2">
 <h2>Python scripts can handle keyboard and mouse events!</h2>
 <ul>
-<li>customize napari functionality:
+<li>Customize napari functionality:
 <ul>
 <li>keyboard and mouse events: <a href="https://napari.org/stable/howtos/connecting_events.html">https://napari.org/stable/howtos/connecting_events.html</a></li>
 </ul></li>
-<li>Example: <a href="https://napari.org/stable/gallery/custom_mouse_functions.html#sphx-glr-gallery-custom-mouse-functions-py">https://napari.org/stable/gallery/custom_mouse_functions.html#sphx-glr-gallery-custom-mouse-functions-py</a></li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="at">@viewer.bind_key</span>(<span class="st">'a'</span>)</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="kw">def</span> accept_image(viewer):</span>
+<span id="cb2-3"><a href="#cb2-3"></a>    msg <span class="op">=</span> <span class="st">'this is a good image'</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a>    viewer.status <span class="op">=</span> msg</span>
+<span id="cb2-5"><a href="#cb2-5"></a>    <span class="bu">print</span>(msg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Example: <a href="https://napari.org/stable/gallery/custom_mouse_functions.html#sphx-glr-gallery-custom-mouse-functions-py">https://napari.org/stable/gallery/custom_mouse_functions.html</a></li>
 </ul>
 <aside class="notes">
 <p>events how-to</p>
@@ -565,8 +572,12 @@ The Jackson Laboratory</p>
 <ul>
 <li><a href="https://pyapp-kit.github.io/magicgui/"><code>magicgui</code></a> makes this quite easy, see <a href="https://napari.org/stable/guides/magicgui.html">https://napari.org/stable/guides/magicgui.html</a></li>
 </ul>
-
-<img data-src="images/sphx_glr_magic_parameter_sweep_001.png" alt="Screenshot of napari UI with a docked widget on the right for applying scikit-image filters" class="r-stretch quarto-figure-center"><ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/magic_parameter_screenshot.png" alt="Screenshot of napari UI with a docked widget on the right for applying scikit-image filters" height="350"></p>
+</figure>
+</div>
+<ul>
 <li><a href="https://napari.org/stable/gallery/magic_parameter_sweep.html">scikit-image filter example: https://napari.org/stable/gallery/magic_parameter_sweep.html</a></li>
 </ul>
 <aside class="notes">
