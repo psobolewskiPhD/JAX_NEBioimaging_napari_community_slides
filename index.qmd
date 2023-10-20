@@ -20,7 +20,7 @@ execute:
 ## 
 
 ### Contributing to the napari community:
-
+ 
 #### widgets, plugins, napari core, documentation—oh my!
 <br/>
 
@@ -109,7 +109,7 @@ Please check existing issues and/or join a Community meeting!
 
 > # Headless napari is just Python!
 
-### -- Juan Nuñez-Iglesias (**@jni**)
+### -- Juan Nunez-Iglesias (**@jni**)
 
 
 ## Share Python scripts & notebooks!
@@ -224,7 +224,7 @@ Don't forget you can contribute to the documentation of your favorite plugin too
 plugin docs
 :::
 
-## Contribute code to napari
+## Contribute code
 
 napari repository: [https://github.com/napari/napari](https://github.com/napari/napari)
 Contribution guide: [https://napari.org/dev/developers/contributing.html](https://napari.org/dev/developers/contributing.html)
