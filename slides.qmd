@@ -95,7 +95,7 @@ This does require an account (free), **but you can use that account to login at 
 reporting problems is very valuable!
 :::
 
-## Dicsuss features and use-cases
+## Discuss features and use-cases
 
 - napari roadmap: [https://github.com/orgs/napari/projects/24/views/1](https://github.com/orgs/napari/projects/24/views/1)
 - GitHub Issues: [https://github.com/napari/napari/issues](https://github.com/napari/napari/issues)
@@ -240,4 +240,4 @@ other napari repos npe2
 napari ecosystem
 :::
 
-## Thank you! {.center}
+## Hope to see you soon! <br/> Thank you! {.center}
